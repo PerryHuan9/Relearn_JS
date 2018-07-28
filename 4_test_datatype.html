@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试数据类型</title>
+    <script>
+        function testTypeof() {
+            var number=3.14158;
+            //对于未赋值或是未定义的变量其类型为undefined
+            document.write(typeof number + "<br>");//undefined
+            document.write(typeof number2 +"<br>")//undefined
+            var a;
+            document.write( a +"<br>");//undefined
+            // document.write(b+"<br>")//not defined error
+            var c = 0o77;
+            document.write(c+"<br>");
+            const d=0xff;
+            document.write(d+"<br>")
+            
+        }
+       
+        function testValue() {
+            var a=0.1,
+                b=0.2;
+            document.write(String(a+b));
+            if(a+b!=0.3){
+                document.write('a+b不不等于0.3<br>');
+            }
+
+
+            var result=Number.MAX_VALUE+Number.MAX_VALUE;
+            document.write(result+"<br>");
+            alert(isFinite(result));//false
+
+            var object=new Date();
+            if(object){
+                alert("对象可自动转为boolean")
+            }
+
+            //Nu
+            alert(Number("12aadad"));
+            alert(Number(""));
+            alert(Number('ad123'));
+        }
+        // testValue();
+
+       
+        function testParseInt() {
+            alert(parseInt(""));//NAN
+            alert(parseInt("070"))
+        //    使用第二个参数
+            alert(parseInt('70',8));
+            alert(parseInt('70',16));
+            alert(parseInt(70,9));
+            console.info('parse(21as):'+parseInt('21as'));
+            console.info('parse(21as):'+parseInt('as21'));
+            
+        }
+        
+        // testParseInt();
+
+        function testString() {
+            document.write("天不生我黄益凛，\n前端万古如长夜\u03a3");
+            var text='黄ad';
+            alert('字符串长度：'+text.length);
+            var a=null;
+            alert("null.toString():"+a.toString());
+            
+        }
+        // testString();
+        
+        function testObject() {
+            var object=new Object();
+            
+            
+        }
+        
+        
+        alert(2/0);
+        
+        
+        
+    </script>
+    
+    
+</head>
+<body>
+
+
+
+    
+</body>
+</html>

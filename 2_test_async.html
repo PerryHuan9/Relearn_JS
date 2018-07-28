@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试script异步加载</title>
+    <!--第二个脚本有可能在第一个脚本之前执行-->
+    <script async src="js/1_change_color.js"></script>
+    <script async src="js/2_change_color.js"></script>
+</head>
+<body>
+    
+    <p id="p1">我是谁</p>
+    <p id="p2">who are you？</p>
+    
+    
+</body>
+</html>
